@@ -1,0 +1,5 @@
+venv/
+payments/__pycache__/
+django_paypal/__pycache__/
+payments/secrets.py
+__pycache__/
