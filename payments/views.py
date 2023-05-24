@@ -11,10 +11,10 @@ def payment(request):
 
     # What you want the button to do.
     paypal_dict = {
-        "business": "receiver_email@example.com",
-        "amount": "10000000.00",
+        "business": "bizkwargdevsdev@gmail.com",
+        "amount": "1.00",
         "item_name": "name of the item",
-        "invoice": "unique-invoice-id",
+        "invoice": "unique-invoice-id1",
         "notify_url": request.build_absolute_uri(reverse('paypal-ipn')),
         "return": request.build_absolute_uri(reverse('successful')),
         "cancel_return": request.build_absolute_uri(reverse('cancelled')),
