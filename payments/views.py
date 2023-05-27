@@ -18,13 +18,15 @@ def payment(request):
         "notify_url": request.build_absolute_uri(reverse('paypal-ipn')),
         "return": request.build_absolute_uri(reverse('successful')),
         "cancel_return": request.build_absolute_uri(reverse('cancelled')),
-        "custom": "premium_plan",  # Custom command to correlate to some function later (optional)
+        
     }
 
     # Create the instance.
     form = PayPalPaymentsForm(initial=paypal_dict)
     context = {"form": form}
     return render(request, "payment.html", context)
+
+
 
 def successful(request):
     return render(request, "successful.html")
