@@ -14,7 +14,7 @@ def payment(request):
         "business": "bizkwargdevsdev@gmail.com",
         "amount": "1.00",
         "item_name": "name of the item",
-        "invoice": "unique-invoice-id1",
+        "invoice": "unique-invoice-id5",
         "notify_url": request.build_absolute_uri(reverse('paypal-ipn')),
         "return": request.build_absolute_uri(reverse('successful')),
         "cancel_return": request.build_absolute_uri(reverse('cancelled')),
