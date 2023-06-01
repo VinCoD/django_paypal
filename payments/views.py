@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.shortcuts import render
 from paypal.standard.forms import PayPalPaymentsForm
+import random
 
 def payment(request):
 
@@ -14,7 +15,7 @@ def payment(request):
         "business": "bizkwargdevsdev@gmail.com",
         "amount": "1.00",
         "item_name": "name of the item",
-        "invoice": "unique-invoice-id5",
+        "invoice": random.randint(1000, 9999),
         "notify_url": request.build_absolute_uri(reverse('paypal-ipn')),
         "return": request.build_absolute_uri(reverse('successful')),
         "cancel_return": request.build_absolute_uri(reverse('cancelled')),
