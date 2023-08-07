@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-byzwr3*z(xaiyki9+3&z#m9f&)n_fhgrt66e&bz9w^d=6-v0os'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -139,5 +139,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles" # new
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # PayPal Settings
-PAYPAL_TEST = True
+PAYPAL_RECEIVER_EMAIL = "your_paypal_email@example.com"
+PAYPAL_TEST = True  # Use sandbox mode during testing
+
 
